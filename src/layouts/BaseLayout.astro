@@ -1,0 +1,106 @@
+---
+import "../styles/global.css";
+import { getImage } from "astro:assets";
+import heroImg from "../assets/hero_bg.png";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "World-class IT consulting, systems management, and AI — purpose-built for businesses that demand the extraordinary.",
+} = Astro.props;
+
+const siteUrl = "https://ameersolutions.com";
+
+// Optimise the hero image at build time so we can preload the WebP
+const optimisedHero = await getImage({
+  src: heroImg,
+  format: "webp",
+  width: 1920,
+  quality: 75,
+});
+---
+
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicon/favicon-96x96.png"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#081423" />
+
+    <!-- OG / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={`${siteUrl}/hero_bg.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Preconnect to font CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols: restricted to exactly what we use (weight 300, no fill) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload optimised hero WebP poster -->
+    <link rel="preload" as="image" href={optimisedHero.src} type="image/webp" fetchpriority="high" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ameer Solutions Inc.",
+      "url": siteUrl,
+      "description": description,
+      "foundingDate": "2015",
+      "founder": {
+        "@type": "Person",
+        "name": "Ameer Yasin",
+      },
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": `${siteUrl}/#contact`,
+      },
+    })} />
+  </head>
+
+  <body
+    class="selection:bg-primary selection:text-on-primary font-body antialiased overflow-x-hidden"
+  >
+    <slot />
+  </body>
+</html>
