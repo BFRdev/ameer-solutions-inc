@@ -1,0 +1,199 @@
+---
+import { Image } from "astro:assets";
+import aiCloudImg from "../assets/ai_cloud.png";
+import systemCraftImg from "../assets/system_craft.png";
+import marketVelocityImg from "../assets/market_velocity.png";
+import digitalAdvisoryImg from "../assets/digital_advisory.png";
+---
+
+<section
+  class="py-40 px-6 md:px-12 max-w-[1440px] mx-auto overflow-hidden"
+  id="services"
+>
+  <div
+    class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8"
+  >
+    <div class="max-w-xl">
+      <h2
+        class="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6"
+      >
+        Core Competencies
+      </h2>
+      <p class="text-on-surface-variant text-lg leading-relaxed">
+        We architect the infrastructure and the influence that defines modern
+        digital dominance with surgical precision.
+      </p>
+    </div>
+    <div
+      class="font-headline text-primary font-bold tracking-widest text-lg uppercase flex items-center gap-4"
+    >
+      <span class="h-px w-12 bg-primary"></span>
+      01 // SERVICES
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- AI & Cloud -->
+    <div class="md:col-span-2 group card-glass p-12 relative overflow-hidden">
+      <div class="relative z-10">
+        <div
+          class="w-16 h-16 bg-primary/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors"
+        >
+          <span class="material-symbols-outlined text-primary text-4xl"
+            >auto_awesome</span
+          >
+        </div>
+        <h3 class="font-headline text-3xl font-bold mb-6">
+          Artificial Intelligence &amp; Cloud
+        </h3>
+        <p
+          class="text-on-surface-variant leading-relaxed max-w-md mb-10 text-lg"
+        >
+          Designing resilient cohesive systems and web based ecosystems that
+          scale with cosmic speed.
+        </p>
+        <ul
+          class="space-y-4 font-label text-xs tracking-[0.2em] uppercase text-on-surface-variant font-medium"
+        >
+          <li class="flex items-center gap-4">
+            <span
+              class="w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_rgba(249,208,86,0.8)]"
+            ></span>
+            Systems Design
+          </li>
+          <li class="flex items-center gap-4">
+            <span
+              class="w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_rgba(249,208,86,0.8)]"
+            ></span>
+            AI Systems & Automations
+          </li>
+          <li class="flex items-center gap-4">
+            <span
+              class="w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_rgba(249,208,86,0.8)]"
+            ></span>
+            Consulting and Administration
+          </li>
+        </ul>
+      </div>
+      <div
+        class="absolute top-0 right-0 w-1/2 h-full opacity-10 grayscale group-hover:grayscale-0 group-hover:opacity-20 transition-all duration-1000 pointer-events-none"
+      >
+        <Image
+          src={aiCloudImg}
+          alt=""
+          class="w-full h-full object-cover"
+          widths={[400, 600]}
+          sizes="(max-width: 768px) 50vw, 300px"
+        />
+      </div>
+    </div>
+
+    <!-- System Craft -->
+    <div class="card-glass p-12 group relative overflow-hidden">
+      <div class="relative z-10">
+        <div
+          class="w-16 h-16 bg-primary/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors"
+        >
+          <span class="material-symbols-outlined text-primary text-4xl"
+            >terminal</span
+          >
+        </div>
+        <h3 class="font-headline text-2xl font-bold mb-6">System Craft</h3>
+        <p
+          class="text-on-surface-variant text-base leading-relaxed mb-10 font-light"
+        >
+          Bespoke web platforms engineered for performance and precision,
+          utilizing high-velocity tech stacks.
+        </p>
+        <div class="pt-8 border-t border-white/5">
+          <span
+            class="text-primary font-bold text-[10px] tracking-[0.3em] uppercase"
+            >Performance First</span
+          >
+        </div>
+      </div>
+      <div
+        class="absolute inset-0 opacity-10 grayscale group-hover:grayscale-0 group-hover:opacity-20 transition-all duration-1000 pointer-events-none"
+      >
+        <Image
+          src={systemCraftImg}
+          alt=""
+          class="w-full h-full object-cover"
+          widths={[400, 600]}
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
+    </div>
+
+    <!-- Market Velocity -->
+    <div class="card-glass p-12 group relative overflow-hidden">
+      <div class="relative z-10">
+        <div
+          class="w-16 h-16 bg-primary/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors"
+        >
+          <span class="material-symbols-outlined text-primary text-4xl"
+            >rocket_launch</span
+          >
+        </div>
+        <h3 class="font-headline text-2xl font-bold mb-6">Market Velocity</h3>
+        <p
+          class="text-on-surface-variant text-base leading-relaxed mb-10 font-light"
+        >
+          Strategic SEO and growth frameworks designed to capture market gravity
+          and ensure your brand's orbit is untouchable.
+        </p>
+        <div class="pt-8 border-t border-white/5">
+          <span
+            class="text-primary font-bold text-[10px] tracking-[0.3em] uppercase"
+            >SEO &amp; Growth</span
+          >
+        </div>
+      </div>
+      <div
+        class="absolute inset-0 opacity-10 grayscale group-hover:grayscale-0 group-hover:opacity-20 transition-all duration-1000 pointer-events-none"
+      >
+        <Image
+          src={marketVelocityImg}
+          alt=""
+          class="w-full h-full object-cover"
+          widths={[400, 600]}
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
+    </div>
+
+    <!-- Digital Advisory -->
+    <div
+      class="md:col-span-2 card-glass p-12 group relative overflow-hidden"
+    >
+      <div class="relative z-10">
+        <div
+          class="w-16 h-16 bg-primary/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors"
+        >
+          <span class="material-symbols-outlined text-primary text-4xl"
+            >architecture</span
+          >
+        </div>
+        <h3 class="font-headline text-3xl font-bold mb-6">Digital Advisory</h3>
+        <p
+          class="text-on-surface-variant leading-relaxed text-lg max-w-2xl"
+        >
+          C-level consulting for digital transformation. We don't just solve
+          problems; we redefine the parameters of your operational cosmos
+          through strategic engineering.
+        </p>
+      </div>
+      <div
+        class="absolute top-0 right-0 w-1/2 h-full opacity-10 grayscale group-hover:grayscale-0 group-hover:opacity-20 transition-all duration-1000 pointer-events-none text-right"
+      >
+        <Image
+          src={digitalAdvisoryImg}
+          alt=""
+          class="w-full h-full object-cover"
+          widths={[400, 600]}
+          sizes="(max-width: 768px) 50vw, 300px"
+        />
+      </div>
+    </div>
+  </div>
+</section>

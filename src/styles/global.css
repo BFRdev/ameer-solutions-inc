@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-error-container: #93000a;
+  --color-inverse-surface: #d7e3f9;
+  --color-surface-container-high: #1f2b3b;
+  --color-secondary-fixed: #d6e3ff;
+  --color-secondary-container: #3c4962;
+  --color-on-error: #690005;
+  --color-tertiary-container: #061836;
+  --color-primary-container: #211800;
+  --color-on-primary: #241a00;
+  --color-outline-variant: #44474d;
+  --color-surface-container-low: #111c2c;
+  --color-error: #ffb4ab;
+  --color-on-secondary: #233148;
+  --color-background: #081423;
+  --color-inverse-primary: #745b00;
+  --color-secondary-fixed-dim: #b9c7e4;
+  --color-secondary: #b9c7e4;
+  --color-on-primary-fixed: #241a00;
+  --color-surface-container-lowest: #040f1e;
+  --color-on-tertiary-fixed: #091b39;
+  --color-on-secondary-container: #abb9d6;
+  --color-tertiary-fixed-dim: #b6c6ed;
+  --color-primary-fixed: #ffe089;
+  --color-tertiary: #b6c6ed;
+  --color-outline: #8f9097;
+  --color-surface-tint: #eac243;
+  --color-on-primary-fixed-variant: #574500;
+  --color-on-surface-variant: #c5c6cd;
+  --color-on-secondary-fixed-variant: #39475f;
+  --color-on-surface: #d7e3f9;
+  --color-surface-dim: #081423;
+  --color-on-background: #d7e3f9;
+  --color-on-error-container: #ffdad6;
+  --color-surface-bright: #2f3a4b;
+  --color-on-tertiary: #20304f;
+  --color-surface: #081423;
+  --color-on-tertiary-container: #7282a5;
+  --color-on-tertiary-fixed-variant: #374767;
+  --color-surface-container-highest: #2a3546;
+  --color-tertiary-fixed: #d8e2ff;
+  --color-surface-variant: #2a3546;
+  --color-primary: #f9d056;
+  --color-inverse-on-surface: #263141;
+  --color-primary-fixed-dim: #f9d056;
+  --color-on-secondary-fixed: #0d1c32;
+  --color-surface-container: #152030;
+  --color-on-primary-container: #9e7e00;
+
+  /* Font families */
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  /* Border radius */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f9d056 0%, #eac243 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary CTA gradient button */
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #f9d056 0%, #eac243 100%);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
+}
+.btn-primary-gradient:hover {
+  filter: brightness(1.1);
+}
+
+/* Glassmorphism card */
+.card-glass {
+  background: rgba(21, 32, 48, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.card-glass:hover {
+  border-color: rgba(249, 208, 86, 0.3);
+  background: rgba(21, 32, 48, 0.6);
+  transform: translateY(-4px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #081423;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3546;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f9d056;
+}
+
+/* Section reveal animation */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 0.8s forwards;
+}
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Privacy policy styles */
+.policy-section h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #f9d056;
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
+}
+.policy-section p,
+.policy-section li {
+  color: #c5c6cd;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.policy-section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+.policy-section li {
+  margin-bottom: 0.4rem;
+}
