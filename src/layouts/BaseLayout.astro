@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { getImage } from "astro:assets";
 import heroImg from "../assets/hero_bg.png";
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title: string;
@@ -102,5 +103,6 @@ const optimisedHero = await getImage({
     class="selection:bg-primary selection:text-on-primary font-body antialiased overflow-x-hidden"
   >
     <slot />
+    <Analytics />
   </body>
 </html>
