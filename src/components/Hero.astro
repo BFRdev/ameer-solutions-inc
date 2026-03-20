@@ -1,4 +1,8 @@
 ---
+import { getImage } from "astro:assets";
+import heroImg from "../assets/hero_bg.png";
+
+const optimisedHero = await getImage({ src: heroImg, format: "webp", width: 1920, quality: 75 });
 ---
 
 <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
@@ -21,11 +25,11 @@
       playsinline
       preload="metadata"
       class="w-full h-full object-cover opacity-40 pointer-events-none"
-      poster="/hero_bg.png"
+      poster={optimisedHero.src}
     >
       <source src="/hero_video.mp4" type="video/mp4" />
       <img
-        src="/hero_bg.png"
+        src={optimisedHero.src}
         alt="Fallback Background"
         class="w-full h-full object-cover"
       />
