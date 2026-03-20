@@ -1,0 +1,71 @@
+---
+interface Props {
+  variant?: "full" | "minimal";
+}
+
+const { variant = "full" } = Astro.props;
+---
+
+<footer
+  class:list={[
+    "bg-surface-container-lowest border-t border-white/5 w-full px-6 md:px-12",
+    variant === "minimal" ? "py-12" : "py-24",
+  ]}
+>
+  <div
+    class:list={[
+      "max-w-[1440px] mx-auto",
+      variant === "full"
+        ? "flex flex-col md:flex-row justify-between items-center gap-12"
+        : "text-center",
+    ]}
+  >
+    {
+      variant === "full" && (
+        <div class="text-center md:text-left">
+          <span class="font-headline font-black text-[#f9d056] text-3xl uppercase tracking-tighter">
+            Ameer Solutions Inc.
+          </span>
+          <p class="font-body text-[10px] uppercase tracking-[0.3em] text-on-surface-variant/50 mt-4">
+            &copy; Ameer Solutions Inc. All Rights Reserved.
+          </p>
+        </div>
+      )
+    }
+
+    {
+      variant === "full" ? (
+        <div class="flex flex-wrap justify-center gap-10 md:gap-16">
+          <a
+            class="font-body text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60 hover:text-white transition-colors duration-200"
+            href="#services"
+          >
+            Services
+          </a>
+          <a
+            class="font-body text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60 hover:text-white transition-colors duration-200"
+            href="#about"
+          >
+            Intelligence
+          </a>
+          <a
+            class="font-body text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60 hover:text-white transition-colors duration-200"
+            href="/privacy"
+          >
+            Privacy
+          </a>
+          <a
+            class="font-body text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60 hover:text-white transition-colors duration-200"
+            href="#contact"
+          >
+            Contact
+          </a>
+        </div>
+      ) : (
+        <p class="font-body text-[10px] uppercase tracking-[0.3em] text-on-surface-variant/50">
+          &copy; Ameer Solutions Inc. All Rights Reserved.
+        </p>
+      )
+    }
+  </div>
+</footer>

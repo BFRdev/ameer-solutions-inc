@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+import ayPic from "../assets/ay-pic.jpg";
+---
+
+<section
+  class="py-48 bg-surface-container-low/20 border-y border-white/5 overflow-hidden"
+  id="about"
+>
+  <div
+    class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center"
+  >
+    <div class="relative">
+      <div
+        class="aspect-square bg-surface-container-highest overflow-hidden rounded-sm border border-white/10 shadow-2xl"
+      >
+        <Image
+          src={ayPic}
+          alt="Ameer Yasin"
+          class="w-full h-full object-cover mix-blend-overlay opacity-60"
+          widths={[400, 600, 800]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
+        />
+      </div>
+      <div
+        class="absolute -bottom-8 -right-8 bg-primary p-12 hidden md:block shadow-2xl shadow-primary/20"
+      >
+        <p
+          class="font-headline font-black text-on-primary text-5xl leading-none tracking-tighter"
+        >
+          THE
+          <br />FOUNDER
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <span
+        class="text-primary font-bold text-[10px] tracking-[0.4em] uppercase mb-8 block"
+        >Intelligence &amp; Purpose</span
+      >
+      <h2
+        class="font-headline text-4xl md:text-6xl font-bold mb-10 leading-tight"
+      >
+        Engineering the
+        <br />
+        Digital Cosmos.
+      </h2>
+      <p
+        class="font-body text-on-surface-variant text-xl leading-relaxed mb-12 italic font-light"
+      >
+        "We believe that every bit of data is a star in a larger constellation.
+        Our mission is to ensure those stars form a coherent, powerful, and
+        beautiful universe for your empire."
+      </p>
+      <div class="grid grid-cols-2 gap-12">
+        <div class="group">
+          <div
+            class="text-5xl font-headline font-bold text-primary mb-4 group-hover:scale-105 transition-transform origin-left"
+          >
+            5 Stars
+          </div>
+          <div
+            class="text-xs uppercase tracking-[0.2em] text-on-surface-variant/70 font-semibold"
+          >
+            Globally Trusted
+          </div>
+        </div>
+        <div class="group">
+          <div
+            class="text-5xl font-headline font-bold text-primary mb-4 group-hover:scale-105 transition-transform origin-left"
+          >
+            10+
+          </div>
+          <div
+            class="text-xs uppercase tracking-[0.2em] text-on-surface-variant/70 font-semibold"
+          >
+            Years of Experience
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
