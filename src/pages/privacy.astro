@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Privacy Policy | Ameer Solutions Inc."
+  description="Privacy Policy for Ameer Solutions Inc. We only collect data when you book a consultation call."
+>
+  <Nav variant="privacy" />
+
+  <main class="max-w-3xl mx-auto px-6 md:px-12 pt-36 pb-32">
+    <!-- Header -->
+    <div class="mb-16">
+      <span
+        class="inline-block py-1 px-3 mb-6 border border-primary/30 text-primary font-bold text-[10px] tracking-[0.3em] uppercase bg-primary/5 rounded-sm"
+        >Legal</span
+      >
+      <h1
+        class="font-headline text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-6"
+      >
+        Privacy Policy
+      </h1>
+      <p class="text-on-surface-variant text-lg font-light">
+        Last updated: <span class="text-primary font-semibold"
+          >March 20, 2026</span
+        >
+      </p>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px w-full bg-white/5 mb-16"></div>
+
+    <!-- Policy Content -->
+    <div class="policy-section space-y-2">
+      <p>
+        Welcome to Ameer Solutions Inc. ("we," "our," or "us"). We respect your
+        privacy and are committed to being transparent about the limited data we
+        collect. This Privacy Policy explains what information we collect, why we
+        collect it, and how it is used.
+      </p>
+
+      <h2>1. What Data We Collect</h2>
+      <p>
+        We only collect personal information when you voluntarily book a
+        consultation call through our website. The information collected at that
+        point may include:
+      </p>
+      <ul>
+        <li>Your full name</li>
+        <li>Your email address</li>
+        <li>Your phone number (if provided)</li>
+        <li>
+          Any notes or details you choose to include with your booking
+        </li>
+      </ul>
+      <p>
+        We do <strong class="text-on-surface font-semibold">not</strong> collect
+        any personal data simply from visiting this website. No cookies for tracking,
+        no analytics profiles, no fingerprinting.
+      </p>
+
+      <h2>2. How We Use Your Data</h2>
+      <p>The data collected through a booking is used solely to:</p>
+      <ul>
+        <li>Schedule and confirm your consultation call</li>
+        <li>Communicate with you regarding your appointment</li>
+        <li>Follow up on your inquiry after the call</li>
+      </ul>
+      <p>
+        We do not sell, rent, or share your personal information with third
+        parties for marketing purposes.
+      </p>
+
+      <h2>3. Third-Party Booking Service</h2>
+      <p>
+        Our booking calendar is powered by <a
+          href="https://tidycal.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary transition-all">TidyCal</a
+        >. When you book a call, your information is also processed by TidyCal
+        in accordance with their own privacy policy. We encourage you to review
+        their policy at <a
+          href="https://tidycal.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary transition-all">tidycal.com/privacy</a
+        >.
+      </p>
+
+      <h2>4. Data Retention</h2>
+      <p>
+        We retain booking information only for the duration necessary to fulfil
+        the consultation and any immediate follow-up. You may request deletion
+        of your information at any time by contacting us.
+      </p>
+
+      <h2>5. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your data</li>
+      </ul>
+      <p>
+        To exercise any of these rights, please reach out to us directly.
+      </p>
+
+      <h2>6. Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us
+        via the booking form on our <a
+          href="/#contact"
+          class="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary transition-all">Contact page</a
+        >.
+      </p>
+    </div>
+
+    <!-- Back CTA -->
+    <div class="mt-20 pt-12 border-t border-white/5">
+      <a
+        href="/"
+        class="btn-primary-gradient text-on-primary px-10 py-4 font-headline font-bold text-xs uppercase tracking-widest rounded-sm inline-block active:scale-95"
+      >
+        &larr; Return to Home
+      </a>
+    </div>
+  </main>
+
+  <Footer variant="minimal" />
+</BaseLayout>
